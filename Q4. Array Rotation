@@ -1,0 +1,23 @@
+Q4. Array Rotation
+
+
+public class Solution {
+    void reversePart(int[] A , int s , int e){
+        int n = A.length;
+        while(s < e){
+            int temp = A[s];
+            A[s] = A[e];
+            A[e] = temp;
+            s++;
+            e--;
+        }
+    }   
+    public int[] solve(int[] A, int B) {
+        int n = A.length;
+        B = B % n;
+        reversePart(A , 0 , n-1);
+        reversePart(A , 0 , B-1);
+        reversePart(A , B , n-1);
+        return A;
+    }
+}
