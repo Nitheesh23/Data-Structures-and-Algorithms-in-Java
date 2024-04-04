@@ -1,0 +1,19 @@
+Q5. Second Largest
+
+
+public class Solution {
+    public int solve(int[] A) {
+        int n =A.length;
+        int max = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+        for (int i = 0; i < n; i++) {
+            if (A[i] > max) {
+                secondLargest = max;
+                max = A[i];
+            } else if (A[i] > secondLargest && A[i] != max) {
+                secondLargest = A[i];
+            }
+        }
+        return (secondLargest == Integer.MIN_VALUE) ? -1 : secondLargest;
+    }
+}
