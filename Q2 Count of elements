@@ -1,4 +1,4 @@
-Q1. Count of elements
+Q2. Count of elements
 
 public class Solution {
     public int solve(int[] A) {
